@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Award, BookOpen, ChefHat, HelpCircle, Mail, Star } from "lucide-react";
 import { ThemeProvider } from "@/providers/ThemeProvider";
@@ -11,6 +11,14 @@ import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import BlogCardOne from '@/components/sections/blog/BlogCardOne';
 import FaqSplitMedia from '@/components/sections/faq/FaqSplitMedia';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
+
+const assetMap = [
+  { id: "hero-pizza", url: "https://images.pexels.com/photos/5953495/pexels-photo-5953495.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Delicious wood-fired pizza fresh from the oven" },
+  { id: "margherita", url: "https://images.pexels.com/photos/8471703/pexels-photo-8471703.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Fresh Margherita pizza with basil and mozzarella" },
+  { id: "pepperoni", url: "https://images.pexels.com/photos/1878346/pexels-photo-1878346.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Pepperoni pizza with melted cheese" },
+  { id: "quattro-stagioni", url: "https://images.pexels.com/photos/1435903/pexels-photo-1435903.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Four seasons pizza with multiple toppings" },
+  { id: "vegetarian", url: "https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Vegetarian pizza with colorful vegetables" }
+];
 
 export default function Home() {
   return (
@@ -38,7 +46,7 @@ export default function Home() {
       <div id="hero" data-section="hero">
         <HeroBillboard
           title="Authentic Italian Pizzeria"
-          description="Experience the true taste of Italy with our wood-fired pizzas made from the finest ingredients and traditional recipes passed down through generations."
+          description="Experience the true taste of Italy with our handcrafted wood-fired pizzas, made from the finest ingredients and traditional recipes passed down through generations of Italian pizza masters."
           tag="Est. 1985"
           tagIcon={Award}
           buttons={[
@@ -53,7 +61,7 @@ export default function Home() {
       <div id="menu" data-section="menu">
         <ProductCardTwo
           title="Our Signature Pizzas"
-          description="Handcrafted with love using authentic Italian ingredients and baked in our traditional wood-fired oven"
+          description="Each pizza is handcrafted with passion using authentic Italian ingredients and baked to perfection in our traditional wood-fired oven"
           tag="Menu"
           tagIcon={ChefHat}
           products={[
@@ -103,10 +111,10 @@ export default function Home() {
 
       <div id="about" data-section="about">
         <TextAbout
-          title="For over 35 years, we've been serving authentic Italian pizzas made with passion, using only the finest ingredients imported directly from Italy and traditional recipes that have been perfected through generations."
+          title="For over 35 years, we've been crafting authentic Italian pizzas with unwavering passion, using only the finest ingredients imported directly from Italy and traditional recipes that have been perfected through generations of master pizza makers."
           buttons={[
-            { text: "Learn Our Story", href: "about" },
-            { text: "Visit Us", href: "contact" }
+            { text: "Discover Our Story", href: "about" },
+            { text: "Visit Our Location", href: "contact" }
           ]}
         />
       </div>
@@ -114,7 +122,7 @@ export default function Home() {
       <div id="reviews" data-section="reviews">
         <TestimonialCardTwo
           title="What Our Customers Say"
-          description="Real reviews from real customers who love our authentic Italian pizzas"
+          description="Authentic reviews from real customers who have experienced the true taste of Italy at our pizzeria"
           tag="Reviews"
           tagIcon={Star}
           testimonials={[
@@ -122,7 +130,7 @@ export default function Home() {
               id: "1",
               name: "Maria Rodriguez",
               role: "Food Blogger",
-              testimonial: "Absolutely incredible! The wood-fired oven gives the pizza such an authentic flavor. The dough is perfectly crispy on the outside and chewy inside. Best pizza I've had outside of Italy!",
+              testimonial: "Absolutely incredible! The wood-fired oven gives the pizza such an authentic flavor that transports you straight to Italy. The dough is perfectly crispy on the outside and beautifully chewy inside. Best pizza I've had outside of Naples!",
               imageSrc: "https://images.pexels.com/photos/3811663/pexels-photo-3811663.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Happy customer Maria Rodriguez"
             },
@@ -130,7 +138,7 @@ export default function Home() {
               id: "2",
               name: "James Thompson",
               role: "Local Resident",
-              testimonial: "Been coming here for 10 years and the quality never disappoints. The Margherita is perfection - fresh basil, authentic mozzarella, and that smoky flavor from the wood oven. A true gem!",
+              testimonial: "Been coming here for 10 years and the quality never disappoints. The Margherita is absolute perfection - fresh basil, authentic buffalo mozzarella, and that distinctive smoky flavor from the wood oven. A true culinary gem!",
               imageSrc: "https://images.pexels.com/photos/6969962/pexels-photo-6969962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Satisfied customer James Thompson"
             },
@@ -138,7 +146,7 @@ export default function Home() {
               id: "3",
               name: "Sofia Chen",
               role: "Pizza Enthusiast",
-              testimonial: "The atmosphere is cozy and the staff is incredibly friendly. The Quattro Stagioni is my favorite - each section has distinct flavors that blend perfectly together. Highly recommend!",
+              testimonial: "The atmosphere is cozy and inviting, and the staff treats you like family. The Quattro Stagioni is my favorite - each section has distinct, vibrant flavors that blend together in perfect harmony. Highly recommend to everyone!",
               imageSrc: "https://images.pexels.com/photos/6969962/pexels-photo-6969962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Happy customer Sofia Chen"
             },
@@ -146,7 +154,7 @@ export default function Home() {
               id: "4",
               name: "Antonio Rossi",
               role: "Italian Tourist",
-              testimonial: "As someone from Naples, I'm very picky about pizza. This place gets it right! The ingredients are fresh, the technique is proper, and it tastes like home. Bravissimo!",
+              testimonial: "As someone from Naples, I'm extremely particular about pizza. This place gets everything right! The ingredients are remarkably fresh, the technique is authentic, and it truly tastes like home. Bravissimo!",
               imageSrc: "https://images.pexels.com/photos/16774290/pexels-photo-16774290.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Satisfied customer Antonio Rossi"
             },
@@ -154,7 +162,7 @@ export default function Home() {
               id: "5",
               name: "Emily Johnson",
               role: "Regular Customer",
-              testimonial: "Perfect date night spot! The ambiance is romantic, the wine selection is excellent, and sharing a pizza here feels special. The vegetarian options are surprisingly delicious too!",
+              testimonial: "Perfect romantic date night spot! The ambiance is wonderfully intimate, the wine selection is exceptional, and sharing a pizza here feels truly special. Even the vegetarian options are surprisingly delicious and creative!",
               imageSrc: "https://images.pexels.com/photos/5779751/pexels-photo-5779751.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Happy couple Emily Johnson"
             }
@@ -165,7 +173,7 @@ export default function Home() {
       <div id="social-proof" data-section="social-proof">
         <SocialProofOne
           title="Featured On"
-          description="Trusted by customers and recognized by leading platforms"
+          description="Recognized by leading food critics and trusted by thousands of satisfied customers"
           tag="Recognition"
           tagIcon={Award}
           logos={[
@@ -185,7 +193,7 @@ export default function Home() {
       <div id="blog" data-section="blog">
         <BlogCardOne
           title="Pizza Stories"
-          description="Behind the scenes stories, recipes, and the art of authentic Italian pizza making"
+          description="Behind-the-scenes stories, traditional recipes, and the artistry of authentic Italian pizza making"
           tag="Blog"
           tagIcon={BookOpen}
           blogs={[
@@ -193,7 +201,7 @@ export default function Home() {
               id: "1",
               category: "Recipes",
               title: "The Secret to Perfect Pizza Dough",
-              excerpt: "Learn the traditional techniques and ingredients that make our pizza dough so special, passed down through generations of Italian bakers.",
+              excerpt: "Discover the traditional techniques and premium ingredients that make our pizza dough extraordinary, featuring time-honored methods passed down through generations of Italian bakers.",
               imageSrc: "https://images.pexels.com/photos/5907869/pexels-photo-5907869.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Chef making pizza dough in kitchen",
               authorName: "Chef Marco",
@@ -204,7 +212,7 @@ export default function Home() {
               id: "2",
               category: "Ingredients",
               title: "Sourcing Authentic Italian Ingredients",
-              excerpt: "Discover how we import the finest San Marzano tomatoes, buffalo mozzarella, and extra virgin olive oil directly from Italy for authentic flavors.",
+              excerpt: "Explore how we carefully import the finest San Marzano tomatoes, authentic buffalo mozzarella, and premium extra virgin olive oil directly from Italy to ensure authentic, exceptional flavors.",
               imageSrc: "https://images.pexels.com/photos/10048321/pexels-photo-10048321.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Fresh Italian ingredients for pizza",
               authorName: "Chef Marco",
@@ -215,7 +223,7 @@ export default function Home() {
               id: "3",
               category: "Tradition",
               title: "The Art of Wood-Fired Cooking",
-              excerpt: "Why our traditional wood-fired oven makes all the difference in creating the perfect crispy crust and smoky flavor that defines authentic Italian pizza.",
+              excerpt: "Understanding why our traditional wood-fired oven makes all the difference in creating the perfect crispy crust and distinctive smoky flavor that defines truly authentic Italian pizza.",
               imageSrc: "https://images.pexels.com/photos/1878346/pexels-photo-1878346.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Traditional wood-fired pizza oven",
               authorName: "Chef Marco",
@@ -229,7 +237,7 @@ export default function Home() {
       <div id="faq" data-section="faq">
         <FaqSplitMedia
           title="Frequently Asked Questions"
-          description="Everything you need to know about our pizzeria, ingredients, and ordering process"
+          description="Everything you need to know about our authentic pizzeria, premium ingredients, and convenient ordering process"
           tag="FAQ"
           tagIcon={HelpCircle}
           imageSrc="https://images.pexels.com/photos/3343622/pexels-photo-3343622.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
@@ -239,27 +247,27 @@ export default function Home() {
             {
               id: "1",
               title: "Do you offer gluten-free pizza options?",
-              content: "Yes! We offer delicious gluten-free pizza crusts made with rice flour and certified gluten-free ingredients. Please inform us of any allergies when ordering so we can take extra precautions in preparation."
+              content: "Absolutely! We offer delicious gluten-free pizza crusts made with premium rice flour and certified gluten-free ingredients. Please inform us of any allergies when ordering so we can take extra precautions during preparation."
             },
             {
               id: "2",
               title: "How long does it take to prepare a pizza?",
-              content: "Our wood-fired pizzas typically take 12-15 minutes to cook in our 900°F oven. During busy periods, please allow 20-30 minutes total including preparation time."
+              content: "Our authentic wood-fired pizzas typically take 12-15 minutes to cook perfectly in our 900°F oven. During busy periods, please allow 20-30 minutes total including careful preparation time."
             },
             {
               id: "3",
               title: "Do you deliver or offer takeout?",
-              content: "Yes! We offer both delivery through DoorDash and Uber Eats, as well as takeout orders. You can call us directly or order online through our website for pickup."
+              content: "Yes! We offer convenient delivery through DoorDash and Uber Eats, as well as takeout orders. You can call us directly or order online through our website for quick pickup."
             },
             {
               id: "4",
               title: "Can you accommodate large groups or parties?",
-              content: "Absolutely! We welcome large groups and can accommodate parties of up to 40 people. Please call us at least 24 hours in advance to make reservations for groups of 8 or more."
+              content: "Absolutely! We warmly welcome large groups and can comfortably accommodate parties of up to 40 people. Please call us at least 24 hours in advance to make reservations for groups of 8 or more."
             },
             {
               id: "5",
               title: "What makes your pizza authentic Italian?",
-              content: "We use traditional techniques including hand-stretched dough, San Marzano tomatoes, buffalo mozzarella, and cook in a wood-fired oven at high heat. Our recipes have been passed down through generations of Italian pizza makers."
+              content: "We use traditional techniques including hand-stretched dough, premium San Marzano tomatoes, authentic buffalo mozzarella, and cook in a wood-fired oven at high heat. Our recipes have been carefully passed down through generations of Italian pizza masters."
             }
           ]}
         />
@@ -269,7 +277,7 @@ export default function Home() {
         <ContactCenter
           tag="Contact"
           title="Ready to taste authentic Italy?"
-          description="Subscribe to our newsletter for exclusive offers, new menu items, and special events. Be the first to know about our seasonal specials!"
+          description="Subscribe to our newsletter for exclusive offers, seasonal menu items, and special events. Be the first to discover our latest culinary creations and seasonal specials!"
           tagIcon={Mail}
           inputPlaceholder="Enter your email"
           buttonText="Subscribe"
